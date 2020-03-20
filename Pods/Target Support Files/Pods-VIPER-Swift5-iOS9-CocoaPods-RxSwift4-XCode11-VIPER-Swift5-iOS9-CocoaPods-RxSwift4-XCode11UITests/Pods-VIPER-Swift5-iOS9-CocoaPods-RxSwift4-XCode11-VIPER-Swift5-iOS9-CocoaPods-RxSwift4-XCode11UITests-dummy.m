@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_VIPER_Swift5_iOS9_CocoaPods_RxSwift4_XCode11_VIPER_Swift5_iOS9_CocoaPods_RxSwift4_XCode11UITests : NSObject
+@end
+@implementation PodsDummy_Pods_VIPER_Swift5_iOS9_CocoaPods_RxSwift4_XCode11_VIPER_Swift5_iOS9_CocoaPods_RxSwift4_XCode11UITests
+@end

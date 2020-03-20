@@ -1,0 +1,6 @@
+framework module Pods_VIPER_Swift5_iOS9_CocoaPods_RxSwift4_XCode11 {
+  umbrella header "Pods-VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11-umbrella.h"
+
+  export *
+  module * { export * }
+}
