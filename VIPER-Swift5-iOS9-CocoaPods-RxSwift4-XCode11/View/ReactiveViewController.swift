@@ -9,12 +9,14 @@
 import UIKit
 
 class ReactiveViewController: UIViewController {
+        
     var rest = REST()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        rest.loadMySQL()
+        
     }
     
 
@@ -27,5 +29,9 @@ class ReactiveViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func btnBackHome(){
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }
