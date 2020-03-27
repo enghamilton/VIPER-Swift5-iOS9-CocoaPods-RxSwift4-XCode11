@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		670A24B224257B5500CD211E /* ReactiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A24B124257B5500CD211E /* ReactiveViewController.swift */; };
+		6741AEFD242989DE002A6F89 /* ReactiveInterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6741AEFC242989DE002A6F89 /* ReactiveInterator.swift */; };
+		67477D952427108F0072FB33 /* ReactiveEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67477D942427108F0072FB33 /* ReactiveEntity.swift */; };
+		67516CF8242AB14100D7D374 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67516CF7242AB14100D7D374 /* RxSwiftViewController.swift */; };
 		67B4D5A1242423AD0056F2FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B4D5A0242423AD0056F2FF /* AppDelegate.swift */; };
 		67B4D5A3242423AD0056F2FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B4D5A2242423AD0056F2FF /* SceneDelegate.swift */; };
 		67B4D5A5242423AD0056F2FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B4D5A4242423AD0056F2FF /* ViewController.swift */; };
@@ -48,6 +51,9 @@
 		51C14F43FC5A4876BC5D0401 /* Pods-VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11-VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11-VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11UITests.release.xcconfig"; path = "Target Support Files/Pods-VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11-VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11UITests/Pods-VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11-VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11UITests.release.xcconfig"; sourceTree = "<group>"; };
 		5BE6C6CEF1EF4A843AD504E4 /* Pods-VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11.release.xcconfig"; path = "Target Support Files/Pods-VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11/Pods-VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11.release.xcconfig"; sourceTree = "<group>"; };
 		670A24B124257B5500CD211E /* ReactiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveViewController.swift; sourceTree = "<group>"; };
+		6741AEFC242989DE002A6F89 /* ReactiveInterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveInterator.swift; sourceTree = "<group>"; };
+		67477D942427108F0072FB33 /* ReactiveEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveEntity.swift; sourceTree = "<group>"; };
+		67516CF7242AB14100D7D374 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
 		67B4D59D242423AD0056F2FF /* VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B4D5A0242423AD0056F2FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67B4D5A2242423AD0056F2FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,8 +120,25 @@
 			isa = PBXGroup;
 			children = (
 				670A24B124257B5500CD211E /* ReactiveViewController.swift */,
+				67516CF7242AB14100D7D374 /* RxSwiftViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		6741AEFB242989BF002A6F89 /* Interator */ = {
+			isa = PBXGroup;
+			children = (
+				6741AEFC242989DE002A6F89 /* ReactiveInterator.swift */,
+			);
+			path = Interator;
+			sourceTree = "<group>";
+		};
+		67477D932427107A0072FB33 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				67477D942427108F0072FB33 /* ReactiveEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		67B4D594242423AD0056F2FF = {
@@ -143,6 +166,8 @@
 		67B4D59F242423AD0056F2FF /* VIPER-Swift5-iOS9-CocoaPods-RxSwift4-XCode11 */ = {
 			isa = PBXGroup;
 			children = (
+				6741AEFB242989BF002A6F89 /* Interator */,
+				67477D932427107A0072FB33 /* Entity */,
 				670A24B32425869200CD211E /* View */,
 				67B4D5A0242423AD0056F2FF /* AppDelegate.swift */,
 				67B4D5A2242423AD0056F2FF /* SceneDelegate.swift */,
@@ -424,9 +449,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67477D952427108F0072FB33 /* ReactiveEntity.swift in Sources */,
 				67B4D5A5242423AD0056F2FF /* ViewController.swift in Sources */,
 				67B4D5A1242423AD0056F2FF /* AppDelegate.swift in Sources */,
 				67B4D5A3242423AD0056F2FF /* SceneDelegate.swift in Sources */,
+				6741AEFD242989DE002A6F89 /* ReactiveInterator.swift in Sources */,
+				67516CF8242AB14100D7D374 /* RxSwiftViewController.swift in Sources */,
 				67B4D5D4242425230056F2FF /* REST.swift in Sources */,
 				67B4D5AB242423AD0056F2FF /* VIPER_Swift5_iOS9_CocoaPods_RxSwift4_XCode11.xcdatamodeld in Sources */,
 				670A24B224257B5500CD211E /* ReactiveViewController.swift in Sources */,
