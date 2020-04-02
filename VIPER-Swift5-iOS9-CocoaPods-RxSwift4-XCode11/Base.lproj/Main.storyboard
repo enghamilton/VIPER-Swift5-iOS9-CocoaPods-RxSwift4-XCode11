@@ -16,8 +16,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhX-Nf-Ja1">
-                                <rect key="frame" x="156" y="94" width="102" height="30"/>
-                                <state key="normal" title="RxSwift Button"/>
+                                <rect key="frame" x="152.5" y="94" width="109" height="30"/>
+                                <state key="normal" title="Reactive Button"/>
                                 <connections>
                                     <action selector="buttonReactive" destination="BYZ-38-t0r" eventType="touchUpInside" id="rYA-QN-I1r"/>
                                     <segue destination="Wmv-rE-MqH" kind="presentation" identifier="btnRx" modalPresentationStyle="fullScreen" id="i5Z-KZ-ORZ"/>
@@ -114,16 +114,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8y-T8-Pnl">
+                                <rect key="frame" x="87" y="142" width="42" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXB-3h-4pw">
+                                <rect key="frame" x="87" y="198" width="109" height="30"/>
+                                <state key="normal" title="Reactive Button"/>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kns-Xk-q3w">
-                                <rect key="frame" x="87" y="389" width="240" height="118"/>
+                                <rect key="frame" x="87" y="275" width="240" height="322"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8y-T8-Pnl">
-                                <rect key="frame" x="87" y="142" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqv-Qb-vUm">
+                                <rect key="frame" x="87" y="626" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -131,11 +141,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Kns-Xk-q3w" firstAttribute="top" secondItem="FgO-ki-2q8" secondAttribute="top" constant="301" id="8g7-TS-KN7"/>
+                            <constraint firstItem="Kns-Xk-q3w" firstAttribute="top" secondItem="FgO-ki-2q8" secondAttribute="top" constant="187" id="8g7-TS-KN7"/>
                             <constraint firstItem="Q8y-T8-Pnl" firstAttribute="top" secondItem="FgO-ki-2q8" secondAttribute="top" constant="54" id="9HO-sh-sqa"/>
-                            <constraint firstItem="Kns-Xk-q3w" firstAttribute="centerY" secondItem="hBb-aC-GKo" secondAttribute="centerY" id="JvM-dr-Lg7"/>
+                            <constraint firstItem="Pqv-Qb-vUm" firstAttribute="top" secondItem="Kns-Xk-q3w" secondAttribute="bottom" constant="29" id="F3L-1n-4r2"/>
+                            <constraint firstItem="rXB-3h-4pw" firstAttribute="top" secondItem="Q8y-T8-Pnl" secondAttribute="bottom" constant="36" id="Feh-Vj-Q9a"/>
+                            <constraint firstItem="Kns-Xk-q3w" firstAttribute="centerY" secondItem="hBb-aC-GKo" secondAttribute="centerY" constant="-12" id="JvM-dr-Lg7"/>
                             <constraint firstItem="Kns-Xk-q3w" firstAttribute="leading" secondItem="FgO-ki-2q8" secondAttribute="leading" constant="87" id="PBZ-ov-kNy"/>
+                            <constraint firstItem="Pqv-Qb-vUm" firstAttribute="leading" secondItem="Kns-Xk-q3w" secondAttribute="leading" id="UcP-vx-Ee2"/>
                             <constraint firstItem="Q8y-T8-Pnl" firstAttribute="leading" secondItem="Kns-Xk-q3w" secondAttribute="leading" id="XKx-eW-a1o"/>
+                            <constraint firstItem="rXB-3h-4pw" firstAttribute="leading" secondItem="Q8y-T8-Pnl" secondAttribute="leading" id="Yu2-E7-6Lh"/>
                             <constraint firstItem="Kns-Xk-q3w" firstAttribute="centerX" secondItem="hBb-aC-GKo" secondAttribute="centerX" id="ndG-xn-vDC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FgO-ki-2q8"/>
@@ -149,12 +163,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="labelRx" destination="Q8y-T8-Pnl" id="2qn-co-aWL"/>
+                        <outlet property="labelRx2" destination="Pqv-Qb-vUm" id="fG7-Fr-avm"/>
                         <outlet property="myRxTextView" destination="Kns-Xk-q3w" id="dna-m7-RZD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wyq-g1-1Rm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2064" y="895"/>
+            <point key="canvasLocation" x="2063.768115942029" y="894.64285714285711"/>
         </scene>
         <!--Reactive-->
         <scene sceneID="rl1-ri-3ma">

@@ -16,6 +16,9 @@ class RxSwiftViewController: UIViewController {
     
     @IBOutlet weak var labelRx: UILabel!
     
+    @IBOutlet weak var labelRx2: UILabel!
+    
+    
     let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
@@ -44,10 +47,29 @@ class RxSwiftViewController: UIViewController {
             print(element)
             DispatchQueue.main.async {
                 self.labelRx?.text = element
+                
+                let alert = UIAlertController(title: "RxSwift 4 for iOS", message: element, preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+                alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+
+                self.present(alert, animated: true)
             }
         }).dispose()
+        
+        let url = URL(string: "https://javarestjson.herokuapp.com/api/produtos")!
+        let request = URLRequest(url: url)
+        let task = URLSession.shared.dataTask(with: request){
+            [weak self] (data, response, error) in
+            DispatchQueue.main.async {
+                let myText = String(data: data!, encoding: .utf8)
+                self?.labelRx2.text = myText!
+            }
+            
+        }
+        task.resume()
+        
     }
-    
 
     /*
     // MARK: - Navigation
@@ -92,6 +114,11 @@ class RxSwiftViewController: UIViewController {
 
     @IBAction func btnHome(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func reactiveButton(_ sender: Any) {
+        
     }
     
 }
