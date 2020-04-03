@@ -38,7 +38,17 @@ class RxSwiftViewController: UIViewController {
         
     //https://www.iosapptemplates.com/blog/ios-development/rxswift-reactive-programming-swift
         let observable = Observable<String>.create { (observer) -> Disposable in
-            observer.onNext("simple rxSwift testing")
+            //observer.onNext("simple rxSwift testing")
+            
+            let url = URL(string: "https://javarestjson.herokuapp.com/api/produtos")!
+            let request = URLRequest(url: url)
+            let task = URLSession.shared.dataTask(with: request){
+                (data, response, error) in
+                let myTextSample = String(data: data!, encoding: .utf8)
+                observer.onNext(myTextSample!)
+            }
+            task.resume()
+            
             observer.onCompleted()
             return Disposables.create()
         }
@@ -91,13 +101,17 @@ class RxSwiftViewController: UIViewController {
             let url = URL(fileURLWithPath: "https://javarestjson.herokuapp.com/api/produtos")
             let request = URLRequest(url: url)
             let task = URLSession.shared.dataTask(with: request){
-                (data, response, error) in
+                [weak self] (data2, response2, error2) in
                 do {
-                    let rest:T = try JSONDecoder().decode(T.self, from: data ?? Data())
-                    //let dataString = String(data: data!, encoding: .utf8)
+                    let rest = try JSONDecoder().decode(T.self, from: data2 ?? Data())
+                    
+                    DispatchQueue.main.async {
+                        self?.labelRx2.text = "hello Rx"
+                    }
+                    
                     myObserver.onNext(rest)
-                } catch let error {
-                    myObserver.onError(error)
+                } catch let error2 {
+                    myObserver.onError(error2)
                 }
                 myObserver.onCompleted()
             }
