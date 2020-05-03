@@ -7,6 +7,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="NzT-Ss-Q7X">
+            <objects>
+                <viewController id="CJf-gy-FNF" customClass="SearchViewController" customModule="VIPER_Swift5_iOS9_CocoaPods_RxSwift4_XCode11" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zpw-Yo-kVj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XL9-al-mz8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jrM-If-3Fm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ec-Jo-62c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3477" y="443"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -34,9 +50,18 @@
                                 <rect key="frame" x="62" y="265" width="290" height="30"/>
                                 <state key="normal" title="TableView Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqZ-9L-rxH">
+                                <rect key="frame" x="62" y="345" width="290" height="30"/>
+                                <state key="normal" title="Search Button"/>
+                                <connections>
+                                    <segue destination="7hD-6j-TxP" kind="presentation" identifier="SegueToSearchViewController" modalPresentationStyle="fullScreen" id="AIV-pd-Ahv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="GqZ-9L-rxH" firstAttribute="centerX" secondItem="zTy-fb-kMp" secondAttribute="centerX" id="4yL-2a-LQ0"/>
+                            <constraint firstItem="GqZ-9L-rxH" firstAttribute="top" secondItem="zTy-fb-kMp" secondAttribute="bottom" constant="50" id="BsU-8g-h0s"/>
                             <constraint firstItem="zTy-fb-kMp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rhd-jS-LIa"/>
                             <constraint firstItem="g0f-vE-CSh" firstAttribute="centerX" secondItem="YhX-Nf-Ja1" secondAttribute="centerX" id="Sop-eo-QLK"/>
                             <constraint firstItem="g0f-vE-CSh" firstAttribute="firstBaseline" secondItem="YhX-Nf-Ja1" secondAttribute="baseline" constant="91" id="W50-bB-CaC"/>
@@ -45,6 +70,7 @@
                             <constraint firstItem="zTy-fb-kMp" firstAttribute="top" secondItem="g0f-vE-CSh" secondAttribute="bottom" constant="50" id="la7-xi-Vcv"/>
                             <constraint firstItem="g0f-vE-CSh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="lgy-pb-UHe"/>
                             <constraint firstItem="YhX-Nf-Ja1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="uxX-dC-ntJ"/>
+                            <constraint firstItem="GqZ-9L-rxH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="xLA-pV-3t6"/>
                             <constraint firstItem="YhX-Nf-Ja1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y6s-Ug-vV3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -55,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="96"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="95.758928571428569"/>
         </scene>
         <!--Reactive-->
         <scene sceneID="U0q-ZG-v71">
@@ -104,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhI-2X-OHI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2065" y="96"/>
+            <point key="canvasLocation" x="3477" y="-1120"/>
         </scene>
         <!--Rx Swift View Controller-->
         <scene sceneID="Diq-dQ-oHu">
@@ -169,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wyq-g1-1Rm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2063.768115942029" y="894.64285714285711"/>
+            <point key="canvasLocation" x="3477" y="-349"/>
         </scene>
         <!--Reactive-->
         <scene sceneID="rl1-ri-3ma">
@@ -191,7 +217,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBh-PS-5Sp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1155" y="96"/>
+            <point key="canvasLocation" x="2325" y="-1120"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1aB-NF-XZq">
@@ -210,7 +236,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hv-WW-tAK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1154" y="895"/>
+            <point key="canvasLocation" x="2325" y="-349"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="72o-Ty-gZT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7hD-6j-TxP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0cQ-Lj-89j">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CJf-gy-FNF" kind="relationship" relationship="rootViewController" id="xZo-4h-QAL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ueR-0r-xI8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2325" y="443"/>
         </scene>
     </scenes>
     <resources>

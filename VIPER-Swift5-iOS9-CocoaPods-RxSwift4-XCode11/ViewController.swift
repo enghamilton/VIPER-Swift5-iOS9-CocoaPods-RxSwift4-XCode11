@@ -15,9 +15,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //let viewControllerB = SearchViewController()
+        //navigationController?.pushViewController(viewControllerB, animated: true)
     }
 
     @IBAction func buttonReactive() {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
 
